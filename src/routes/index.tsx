@@ -21,13 +21,13 @@ export const useUserListLoader = routeLoader$(async (context) => {
 });
 
 export default component$(() => {
-  const users = useUserListLoader();
+  const userData = useUserListLoader();
 
   return (
     <>
       <h1>Users</h1>
       <ul>
-        {users?.value.users.map((user) => (
+        {userData.value.users.map((user) => (
           <li key={user.id}>{user.name}</li>
         ))}
       </ul>
