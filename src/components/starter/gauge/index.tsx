@@ -1,4 +1,5 @@
 import { component$ } from '@builder.io/qwik';
+
 import styles from './gauge.module.css';
 
 export default component$(({ value = 50 }: { value?: number }) => {
@@ -14,7 +15,13 @@ export default component$(({ value = 50 }: { value?: number }) => {
           </linearGradient>
         </defs>
 
-        <circle r="56" cx="60" cy="60" stroke-width="8" style="fill: #000; stroke: #0000"></circle>
+        <circle
+          r="56"
+          cx="60"
+          cy="60"
+          stroke-width="8"
+          style="fill: #000; stroke: #0000"
+        ></circle>
 
         <circle
           r="56"

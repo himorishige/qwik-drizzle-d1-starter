@@ -1,4 +1,5 @@
 import { component$ } from '@builder.io/qwik';
+
 import styles from './hero.module.css';
 
 export default component$(() => {
@@ -34,7 +35,8 @@ export default component$(() => {
                 const script = document.createElement('script');
                 script.src =
                   'https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js';
-                script.onload = () => resolve((globalThis as any).confetti as any);
+                script.onload = () =>
+                  resolve((globalThis as any).confetti as any);
                 script.onerror = reject;
                 document.head.appendChild(script);
                 script.remove();
@@ -66,7 +68,11 @@ export default component$(() => {
         >
           Time to celebrate
         </button>
-        <a href="https://qwik.builder.io/docs" target="_blank" class="button button-dark">
+        <a
+          href="https://qwik.builder.io/docs"
+          target="_blank"
+          class="button button-dark"
+        >
           Explore the docs
         </a>
       </div>

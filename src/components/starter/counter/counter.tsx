@@ -1,6 +1,7 @@
-import { component$, useSignal, $ } from '@builder.io/qwik';
-import styles from './counter.module.css';
+import { $, component$, useSignal } from '@builder.io/qwik';
+
 import Gauge from '../gauge';
+import styles from './counter.module.css';
 
 export default component$(() => {
   const count = useSignal(70);
@@ -14,11 +15,17 @@ export default component$(() => {
 
   return (
     <div class={styles['counter-wrapper']}>
-      <button class="button-dark button-small" onClick$={() => setCount(count.value - 1)}>
+      <button
+        class="button-dark button-small"
+        onClick$={() => setCount(count.value - 1)}
+      >
         -
       </button>
       <Gauge value={count.value} />
-      <button class="button-dark button-small" onClick$={() => setCount(count.value + 1)}>
+      <button
+        class="button-dark button-small"
+        onClick$={() => setCount(count.value + 1)}
+      >
         +
       </button>
     </div>
