@@ -1,0 +1,7 @@
+name = "qwik-app-d1"
+compatibility_date = "2023-05-09"
+
+[[ d1_databases ]]
+binding = "DB" # i.e. available in your Worker on env.DB
+database_name = "QWIK_STARTER_DB"
+database_id = "c7271d3f-581a-464d-a898-472720433cc2"

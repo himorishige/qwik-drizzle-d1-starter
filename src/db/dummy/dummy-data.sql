@@ -1,0 +1,1 @@
+INSERT INTO users (id, name) VALUES (1, 'Maria Anders'), (4, 'Thomas Hardy'), (11, 'Victoria Ashworth'), (13, 'Random Name');

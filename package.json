@@ -20,7 +20,10 @@
     "lint": "eslint \"src/**/*.ts*\"",
     "preview": "qwik build preview && vite preview --open",
     "start": "vite --open --mode ssr",
-    "qwik": "qwik"
+    "qwik": "qwik",
+    "migrate.gen": "drizzle-kit generate:sqlite",
+    "migrate.dev": "wrangler d1 migrations apply DB --local",
+    "migrate.production": "wrangler d1 migrations apply DB"
   },
   "devDependencies": {
     "@builder.io/qwik": "1.0.0",
@@ -33,7 +36,6 @@
     "@typescript-eslint/parser": "5.59.1",
     "better-sqlite3": "^8.3.0",
     "drizzle-kit": "^0.17.6",
-    "drizzle-orm": "^0.25.4",
     "eslint": "8.39.0",
     "eslint-plugin-qwik": "1.0.0",
     "prettier": "2.8.8",
@@ -44,6 +46,7 @@
     "wrangler": "latest"
   },
   "dependencies": {
+    "drizzle-orm": "^0.25.4",
     "@miniflare/d1": "^2.14.0",
     "@miniflare/shared": "^2.14.0"
   }
